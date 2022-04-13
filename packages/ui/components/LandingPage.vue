@@ -55,7 +55,8 @@ export default {
       }
     },
     supportedChains() {
-      return this.navBarOptions.map((chain) => {
+      const result = this.navBarOptions.map((chain) => {
+        console.log('---supported chains---', chain)
         return {
           name: chain,
           count:
@@ -64,12 +65,13 @@ export default {
           detailsPath: {
             name: 'network',
             params: {
-              network: chain,
+              network: chain.toLowerCase(),
             },
           },
           img: formatSvgChainName(chain),
         }
       })
+      return result
     },
   },
   mounted() {

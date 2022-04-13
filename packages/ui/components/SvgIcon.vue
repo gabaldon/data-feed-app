@@ -1,13 +1,28 @@
 <template>
   <!-- We are using v-html assuming we never use user-provided content -->
   <!-- eslint-disable-next-line vue/no-v-html -->
-  <div v-html="require(`~/assets/svg/${name}.svg?raw`)" />
+  <div v-html="svg" />
 </template>
 
 <script>
 export default {
   props: {
     name: { type: String, required: true },
+  },
+  data() {
+    return {
+      svg: null,
+    }
+  },
+  async created() {
+    await this.$axios
+      .$get(
+        `https://raw.github.com/witnet/data-feeds-explorer/main/packages/ui/assets/svg/avax.svg?sanitize=true`
+      )
+      .then((res) => {
+        this.svg = res
+      })
+      .catch((err) => console.log(err))
   },
 }
 </script>

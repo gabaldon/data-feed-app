@@ -129,6 +129,7 @@ export default {
     'nuxt-i18n',
     '@nuxtjs/apollo',
     'nuxt-element-ui',
+    '@nuxtjs/axios',
   ],
 
   elementUI: {
@@ -213,5 +214,8 @@ export default {
   },
   publicRuntimeConfig: {
     baseUrl: process.env.API_ENDPOINT,
+    axios: {
+      baseUrl: 'https://feeds.witnet.io',
+    },
   },
 }
