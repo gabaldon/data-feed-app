@@ -14,11 +14,9 @@ export default {
       svg: null,
     }
   },
-  async created() {
+  async beforeMount() {
     await this.$axios
-      .$get(
-        `https://raw.github.com/witnet/data-feeds-explorer/main/packages/ui/assets/svg/avax.svg?sanitize=true`
-      )
+      .$get(`api/${this.name}.svg?sanitize=true`)
       .then((res) => {
         this.svg = res
       })

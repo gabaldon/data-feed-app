@@ -218,7 +218,8 @@ export default {
   },
   proxy: {
     '/api/': {
-      target: 'https://feeds.witnet.io/',
+      target:
+        'https://raw.github.com/witnet/data-feeds-explorer/main/packages/ui/assets/svg/',
       pathRewrite: { '^/api/': '' },
       changeOrigin: true,
     },
