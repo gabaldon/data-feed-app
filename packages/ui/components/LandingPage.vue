@@ -55,8 +55,7 @@ export default {
       }
     },
     supportedChains() {
-      const result = this.navBarOptions.map((chain) => {
-        console.log('---supported chains---', chain)
+      return this.navBarOptions.map((chain) => {
         return {
           name: chain,
           count:
@@ -71,7 +70,6 @@ export default {
           img: formatSvgChainName(chain),
         }
       })
-      return result
     },
   },
   mounted() {

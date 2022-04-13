@@ -130,6 +130,7 @@ export default {
     '@nuxtjs/apollo',
     'nuxt-element-ui',
     '@nuxtjs/axios',
+    '@nuxtjs/proxy',
   ],
 
   elementUI: {
@@ -212,10 +213,17 @@ export default {
     },
     errorHandler: '~/plugins/apollo-error-handler.js',
   },
+  axios: {
+    proxy: true,
+  },
+  proxy: {
+    '/api/': {
+      target: 'https://feeds.witnet.io/',
+      pathRewrite: { '^/api/': '' },
+      changeOrigin: true,
+    },
+  },
   publicRuntimeConfig: {
     baseUrl: process.env.API_ENDPOINT,
-    axios: {
-      baseUrl: 'https://feeds.witnet.io',
-    },
   },
 }
