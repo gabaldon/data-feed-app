@@ -1024,11 +1024,6 @@
     "polygon": {
       "name": "Polygon",
       "networks": {
-        "polygon.amoy": {
-          "name": "Polygon Amoy",
-          "blockExplorer": "https://amoy.polygonscan.com/address/{address}",
-          "version": "2.0"
-        },
         "polygon.mainnet": {
           "mainnet": true,
           "address": "0x3806311c7138ddF2bAF2C2093ff3633E5A73AbD4",
