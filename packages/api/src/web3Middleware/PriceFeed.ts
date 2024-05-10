@@ -81,11 +81,14 @@ export class PriceFeed {
     networkName: string,
     chain: string,
   ): PriceFeed {
+    console.log('fromWitnetPriceFeedsContract')
     const feedConfiguration = configuration.getFeedConfiguration(
       feed.caption,
       network,
     )
+    
     const networkConfiguration = configuration.getNetworkConfiguration(network)
+    console.log('config 2.0:', networkName, networkConfiguration)
 
     if (!feedConfiguration || Object.keys(feedConfiguration).length === 0) {
       throw new Error(`${feed.caption} not found in configuration file`)

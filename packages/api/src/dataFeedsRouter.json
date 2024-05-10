@@ -62,11 +62,6 @@
               "minSecsBetweenUpdates": 3600
             }
           }
-        },
-        "avalanche.testnet": {
-          "name": "Avalanche Fuji",
-          "blockExplorer": "https://testnet.snowtrace.io/address/{address}",
-          "version": "2.0"
         }
       }
     },

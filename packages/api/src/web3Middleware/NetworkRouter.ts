@@ -125,6 +125,7 @@ export class NetworkRouter {
 
   async getFeedInfos(): Promise<Array<FeedInfo>> {
     const suppoortedFeeds = await this.getSupportedFeeds()
+    console.log('Get feed infos!', suppoortedFeeds)
 
     return suppoortedFeeds
       .map((supportedFeed) => {

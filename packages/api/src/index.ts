@@ -48,6 +48,8 @@ async function main() {
     logo: networksLogos[logosToFetch[index]],
   }))
 
+  console.log('List networks using price feeds contract:', configuration.listNetworksUsingPriceFeedsContract())
+
   const routers = configuration
     .listNetworksUsingPriceFeedsContract()
     .filter((config) => {

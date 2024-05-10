@@ -46,6 +46,12 @@ export class Configuration {
 
   // return networks using the new price feeds router contract
   public listNetworksUsingPriceFeedsContract(): Array<NetworkInfo> {
+    // const congiFile = Object.values(this.configurationFile.chains)
+    // const confluxChains = congiFile.filter((chain) => chain.name === 'Conflux')
+    // console.log('0. Conflux chains', confluxChains[0].networks)
+
+    // console.log('2. chain.networks 2.0', Object.values(this.configurationFile.chains).flatMap((chain) =>
+    //   Object.entries(chain.networks).filter(([_, network]) => network.version === '2.0')))
     return Object.values(this.configurationFile.chains).flatMap((chain) =>
       Object.entries(chain.networks)
         .filter(([_, network]) => network.version === '2.0')
