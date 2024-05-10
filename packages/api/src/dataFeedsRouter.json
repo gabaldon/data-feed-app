@@ -1002,23 +1002,6 @@
           "name": "OKX X1 Sepolia",
           "blockExplorer": "https://www.okx.com/web3/explorer/xlayer-test/address/{address}",
           "version": "2.0"
-        },
-        "okx.oktchain.testnet": {
-          "name": "OKT Chain Testnet",
-          "blockExplorer": "https://www.oklink.com/en/oktc-test/address/{address}",
-          "version": "2.0",
-          "feeds": {
-            "Price-OKT/USDT-6": {
-              "deviationPercentage": 0.5,
-              "maxSecsBetweenUpdates": 3600,
-              "minSecsBetweenUpdates": 300
-            },
-            "Price-USDT/USD-6": {
-              "deviationPercentage": 0.1,
-              "maxSecsBetweenUpdates": 3600,
-              "minSecsBetweenUpdates": 300
-            }
-          }
         }
       }
     },
