@@ -1233,16 +1233,6 @@
         }
       }
     },
-    "ten": {
-      "name": "TEN",
-      "networks": {
-        "ten.testnet": {
-          "name": "TEN Testnet",
-          "blockExplorer": "https://tenscan.io/{address}",
-          "version": "2.0"
-        }
-      }
-    },
     "ultron": {
       "name": "Ultron",
       "networks": {
